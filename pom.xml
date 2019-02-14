@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.vdzon</groupId>
+    <artifactId>javalin_samples</artifactId>
+    <version>0.1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>javalin_json_logging</module>
+        <module>javalin_basic_auth</module>
+        <module>javalin_https</module>
+        <module>javalin_base</module>
+        <module>javalin_bean_validation</module>
+        <module>javalin_static_files</module>
+        <module>javalin_dependency_injection</module>
+        <module>javalin_yaml_properties</module>
+        <module>javalin_runnable_jar</module>
+        <module>javalin_http_client</module>
+        <module>javalin_prometheus</module>
+        <module>javalin_spring_cloud_contract</module>
+        <module>javalin_thymeleaf</module>
+        <module>javalin_exception_handling</module>
+        <module>javalin_health_check</module>
+        <module>javalin_schedule</module>
+        <module>javalin_sql</module>
+    </modules>
+
+</project>

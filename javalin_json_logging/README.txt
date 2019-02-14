@@ -1,0 +1,1 @@
+Use log4j and configure with json logging

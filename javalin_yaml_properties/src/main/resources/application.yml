@@ -1,0 +1,4 @@
+!!com.properties.props.ApplicationProperties
+# test properties in yaml format
+myprop1: value1
+myprop2: value2
