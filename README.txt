@@ -1,0 +1,30 @@
+Sample java modules as an alternative for Spring Boot applications.
+
+Each sample has an integration test which starts the whole application and tests the specific module.
+
+Basic web features (all directly supported by javalin) :
+javalin_base : Most simple REST application
+javalin_basic_auth : Rest application with basic authentication
+javalin_exception_handling : Rest application with mapping exceptions
+javalin_health_check : Rest application with health checks
+javalin_https : Rest application with https support
+javalin_runnable_jar : Application running as a runnable jar
+javalin_static_files : Application serving static files
+javalin_thymeleaf : Application serving thymeleaf templates (javalin with thymeleaf)
+
+Other web feature :
+javalin_http_client : Application with a rest client, including circuit breakers / retry / fallback (with apache httpclient and failsafe)
+
+Other features :
+javalin_json_logging : Application with logging in kibana format(with Log4j)
+javalin_sql : Application with an SQL client (with Hybernate)
+javalin_dependency_injection : Application using dependency injection (using Dagger2)
+javalin_yaml_properties : Application with a yaml configuration file (snakeyml)
+javalin_bean_validation : Rest application with bean validation (hybernate validator)
+javalin_schedule : Application with scheduled jobs
+
+Only for testing :
+javalin_spring_cloud_contract : Application with a Consumer Driven Contract
+
+Logging / tracing :
+javalin_prometheus : Application with prometheus metrix
