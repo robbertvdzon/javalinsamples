@@ -9,7 +9,7 @@ in a modern microservice.
 * javalin_base is the most basic project that serves a REST call. All other projects are based on this project with only added one extra feature. +
 * Each sub project also contains an integration test which starts the whole application and tests the specific feature of that project.
 
-=== Basic web features (all using javalin)
+=== Basic web features (all using only javalin)
 link:/javalin_base[Most simple REST application] +
 link:/javalin_basic_auth[Rest application with basic authentication] +
 link:/javalin_exception_handling[Rest application with mapping exceptions] +
