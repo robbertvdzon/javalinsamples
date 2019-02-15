@@ -1,35 +1,31 @@
+:ext-relative: adoc
 == Sample java modules as an alternative for Spring Boot applications.
 
 NOTE: Each sample has an integration test which starts the whole application and tests the specific module.
 
 === Basic web features (all directly supported by javalin)
-[source]
-javalin_base : Most simple REST application
-javalin_basic_auth : Rest application with basic authentication
-javalin_exception_handling : Rest application with mapping exceptions
-javalin_health_check : Rest application with health checks
-javalin_https : Rest application with https support
-javalin_runnable_jar : Application running as a runnable jar
-javalin_static_files : Application serving static files
-javalin_thymeleaf : Application serving thymeleaf templates (javalin with thymeleaf)
+link:/javalin_base/README.adoc[Most simple REST application]
+link:/javalin_basic_auth/README.adoc[Rest application with basic authentication]
+link:/javalin_exception_handling/README.adoc[Rest application with mapping exceptions]
+link:/javalin_health_check/README.adoc[Rest application with health checks]
+link:/javalin_https/README.adoc[Rest application with https support]
+link:/javalin_runnable_jar/README.adoc[Application running as a runnable jar]
+link:/javalin_static_files/README.adoc[Application serving static files]
+link:/javalin_thymeleaf/README.adoc[Application serving thymeleaf templates (javalin with thymeleaf)]
 
 === Other web feature
-[source]
-javalin_http_client : Application with a rest client, including circuit breakers / retry / fallback (with apache httpclient and failsafe)
+link:/javalin_http_client/README.adoc[Application with a rest client, including circuit breakers / retry / fallback (with apache httpclient and failsafe)]
 
 === Other features
-[source]
-javalin_json_logging : Application with logging in kibana format(with Log4j)
-javalin_sql : Application with an SQL client (with Hybernate)
-javalin_dependency_injection : Application using dependency injection (using Dagger2)
-javalin_yaml_properties : Application with a yaml configuration file (snakeyml)
-javalin_bean_validation : Rest application with bean validation (hybernate validator)
-javalin_schedule : Application with scheduled jobs
+link:/javalin_json_logging/README.adoc[Application with logging in kibana format(with Log4j)]
+link:/javalin_sql/README.adoc[Application with an SQL client (with Hybernate)]
+link:/javalin_dependency_injection/README.adoc[Application using dependency injection (using Dagger2)]
+link:/javalin_yaml_properties/README.adoc[Application with a yaml configuration file (snakeyml)]
+link:/javalin_bean_validation/README.adoc[Rest application with bean validation (hybernate validator)]
+link:/javalin_schedule/README.adoc[Application with scheduled jobs]
 
 === Consumer Driven Contract
-[source]
-javalin_spring_cloud_contract : Application with a Consumer Driven Contract
+link:/javalin_spring_cloud_contract/README.adoc[Application with a Consumer Driven Contract]
 
 === Logging / tracing :
-[source]
-javalin_prometheus : Application with prometheus metrix
+link:/javalin_prometheus/README.adoc[Application with prometheus metrix]
