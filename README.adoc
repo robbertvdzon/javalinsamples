@@ -1,7 +1,7 @@
 :ext-relative: adoc
-== Sample java modules as an alternative for Spring Boot applications.
+== Sample java projects faeturing a technology that can be used as an alternative for using Spring Boot.
 
-NOTE: Each sample has an integration test which starts the whole application and tests the specific module.
+NOTE: Each sub project has an integration test which starts the whole application and tests the specific module.
 
 === Basic web features (all directly supported by javalin)
 link:/javalin_base[Most simple REST application] +
@@ -17,15 +17,15 @@ link:/javalin_thymeleaf[Application serving thymeleaf templates (javalin with th
 link:/javalin_http_client[Application with a rest client, including circuit breakers / retry / fallback (with apache httpclient and failsafe)] +
 
 === Other features
-link:/javalin_json_logging[Application with logging in kibana format(with Log4j)] +
-link:/javalin_sql[Application with an SQL client (with Hybernate)] +
+link:/javalin_json_logging[Application with logging in kibana format(using Log4j)] +
+link:/javalin_sql[Application with an SQL client (using Hybernate)] +
 link:/javalin_dependency_injection[Application using dependency injection (using Dagger2)] +
-link:/javalin_yaml_properties[Application with a yaml configuration file (snakeyml)] +
-link:/javalin_bean_validation[Rest application with bean validation (hybernate validator)] +
-link:/javalin_schedule[Application with scheduled jobs] +
+link:/javalin_yaml_properties[Application with a yaml configuration file (using snakeyml)] +
+link:/javalin_bean_validation[Rest application with bean validation (using hybernate validator)] +
+link:/javalin_schedule[Application with scheduled jobs (using quartz)] +
 
 === Consumer Driven Contract
-link:/javalin_spring_cloud_contract[Application with a Consumer Driven Contract] +
+link:/javalin_spring_cloud_contract[Application with a Consumer Driven Contract (using spring cloud contract)] +
 
 === Logging / tracing :
-link:/javalin_prometheus[Application with prometheus metrix] +
+link:/javalin_prometheus[Application with prometheus metrix (using jmx_exporter)] +
