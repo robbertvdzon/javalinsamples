@@ -1,0 +1,29 @@
+=== Basic javalin application, with json support
+
+Add the following dependencies:
+[source]
+        <dependency>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.8</version>
+        </dependency>
+
+Use the following as your main application:
+[source, java]
+    public static void main(String[] args) {
+        Javalin app = Javalin.create();
+        app.get("/", ctx -> ctx.result("Hello World from javalin"));
+        app.get("/json", ctx -> ctx.json(new MyJson("Hello World")));
+        app.post("/json", ctx -> ctx.result("Got post of " + ctx.bodyAsClass(MyJson.class).getText()));
+        app.start(8080);
+    }

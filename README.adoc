@@ -1,6 +1,6 @@
 == Sample java modules as an alternative for Spring Boot applications.
 
-Each sample has an integration test which starts the whole application and tests the specific module.
+NOTE: Each sample has an integration test which starts the whole application and tests the specific module.
 
 === Basic web features (all directly supported by javalin)
 [source]
