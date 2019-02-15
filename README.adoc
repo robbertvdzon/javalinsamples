@@ -1,10 +1,11 @@
 :ext-relative: adoc
+[%hardbreaks]
 == Sample java modules as an alternative for Spring Boot applications.
 
 NOTE: Each sample has an integration test which starts the whole application and tests the specific module.
 
 === Basic web features (all directly supported by javalin)
-link:/javalin_base/README.adoc[Most simple REST application]
+link:/javalin_base[Most simple REST application]
 link:/javalin_basic_auth/README.adoc[Rest application with basic authentication]
 link:/javalin_exception_handling/README.adoc[Rest application with mapping exceptions]
 link:/javalin_health_check/README.adoc[Rest application with health checks]
