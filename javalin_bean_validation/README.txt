@@ -1,1 +1,0 @@
-Basic javalin application, with json support

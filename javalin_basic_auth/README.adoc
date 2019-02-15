@@ -1,6 +1,6 @@
 This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
 
-In this demo, the following url can be accessed without basic auth:
+In this project, the following url can be accessed without basic auth:
 http://localhost:8080/
 
 and the for the following, basic auth is required:
@@ -26,4 +26,4 @@ To secure an endpoint, you simply add a roles parameter to the mapping:
 [source, java]
         app.get("/secure", ctx -> ctx.result("Secured page"), roles(UserRole.ROLE_ONE));
 
-
+Check the source for more details.

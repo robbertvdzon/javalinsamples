@@ -1,0 +1,21 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project demonstrated bean validation.
+[source, java]
+    private void handlePost(Context ctx) {
+        MyJson myJson = ctx.bodyAsClass(MyJson.class);
+        validateBean(myJson);
+        ctx.result("Got post of " + myJson.getText());
+    }
+
+    public void validateBean(Object myJson) {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        Set<ConstraintViolation<Object>> violations = validator.validate(myJson);
+        if (!violations.isEmpty()) {
+            String errorMsg = violations.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining(","));
+            throw new ValidationException(errorMsg);
+        }
+    }
+
+Check the source for more details.
