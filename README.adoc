@@ -1,5 +1,8 @@
 :ext-relative: adoc
 == Sample java projects faeturing a technology that can be used as an alternative for using Spring Boot.
+This git repo contains multiple standalone applications, each featuring a single technology using Javalin and friends.
+This can be used when you want te create your own Javalin based application and use any feature that you would expect
+in a modern microservice.
 
 *Note:*
 
