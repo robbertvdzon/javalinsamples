@@ -1,4 +1,4 @@
-This project is base on the following project: link:/../javalin_base[Most simple REST application] +
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
 
 In this demo, the following url can be accessed without basic auth:
 http://localhost:8080/
