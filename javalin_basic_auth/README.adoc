@@ -1,0 +1,29 @@
+This project is base on the following project: link:/../javalin_base[Most simple REST application] +
+
+In this demo, the following url can be accessed without basic auth:
+http://localhost:8080/
+
+and the for the following, basic auth is required:
+http://localhost:8080/secure
+
+You can login with username='user' and passwd='passwd'
+
+To use authentication in Javalin, you need to call the javalin app object with the folowing:
+[source, java]
+        app.accessManager((handler, ctx, permittedRoles) -> {
+            UserRole userRole = getUserRole(ctx);
+            if (permittedRoles.isEmpty() || permittedRoles.contains(userRole)) {
+                handler.handle(ctx);
+            } else {
+                ctx.header("WWW-Authenticate","Basic realm=\"User Visible Realm\"");
+                ctx.status(401).result("Unauthorized");
+            }
+        });
+
+This handler will be called for each request. You can create your own'getUserRole' method that returns a Role based on the request.
+
+To secure an endpoint, you simply add a roles parameter to the mapping:
+[source, java]
+        app.get("/secure", ctx -> ctx.result("Secured page"), roles(UserRole.ROLE_ONE));
+
+
