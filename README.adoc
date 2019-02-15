@@ -9,6 +9,10 @@ in a modern microservice.
 * javalin_base is the most basic project that serves a REST call. All other projects are based on this project with only added one extra feature. +
 * Each sub project also contains an integration test which starts the whole application and tests the specific feature of that project.
 
+This repo is part of the following blog:
+link:https://vdzon.wordpress.com/2019/02/15/escape-from-the-spring-magic-with-javalin-and-friends/[Escape from the Spring magic with Javalin and friends] +
+
+
 === Basic web features (all using only javalin)
 link:/javalin_base[Most simple REST application] +
 link:/javalin_basic_auth[Rest application with basic authentication] +
