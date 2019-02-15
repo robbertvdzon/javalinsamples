@@ -1,9 +1,11 @@
 :ext-relative: adoc
 == Sample java projects faeturing a technology that can be used as an alternative for using Spring Boot.
 
-NOTE: Each sub project has an integration test which starts the whole application and tests the specific module.
+NOTE:
+Each sub project has an integration test which starts the whole application and tests the specific module. +
+javalin_base is the most basic project that serves a REST call. All other projects are based on this project with only added one extra feature.
 
-=== Basic web features (all directly supported by javalin)
+=== Basic web features (all using javalin)
 link:/javalin_base[Most simple REST application] +
 link:/javalin_basic_auth[Rest application with basic authentication] +
 link:/javalin_exception_handling[Rest application with mapping exceptions] +
