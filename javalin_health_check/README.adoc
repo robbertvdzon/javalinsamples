@@ -1,0 +1,7 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how you can add health checks.
+
+You start multiple javalin instances, each running on a different port. This way you can use javalin
+running on port 8080 for handling your business requests, and all 'management' requests (including a
+health check) on port 8090. You could restrict port 8090 to block requsts from the outside.

@@ -1,0 +1,39 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to change the log format into json, which can be used to handled by e.g. kibana.
+
+First, add the log4j dependency:
+[code]
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+
+Secondly, add the following log4j2.properties:
+[code]
+# log4j2.properties
+status = error
+dest = err
+name = PropertiesConfig
+
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = JsonLayout
+appender.console.layout.compact= false
+appender.console.layout.eventEol= true
+appender.console.layout.locationInfo= true
+#appender.console.layout.stacktraceAsString= true
+
+rootLogger.level = info
+rootLogger.appenderRef.stdout.ref = STDOUT

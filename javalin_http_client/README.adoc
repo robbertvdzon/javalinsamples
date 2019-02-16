@@ -1,0 +1,11 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to call external systems.
+
+In this sample, we use failsafe for adding circuit breaker, retrying and failover support, and
+apache httpclient (with fluent-hc) as the http client.
+
+More information about these components can be found here:
+link:https://github.com/jhalterman/failsafe[https://github.com/jhalterman/failsafe] +
+link:https://www.baeldung.com/httpclient-post-http-request[https://www.baeldung.com/httpclient-post-http-request]
+

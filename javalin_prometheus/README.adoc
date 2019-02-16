@@ -1,0 +1,15 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to add an endpoint that shows metrics.
+
+This is not implemented in the application itself, but is done by setting jmx_prometheus_javaagent as the javaagent
+[code]
+java -javaagent:jmx_prometheus_javaagent-0.11.0.jar=8081:config.yaml -jar target\javalin_prometheus-0.1.0-shaded.jar
+
+The applicatie then runs on http://localhost:8080/ +
+The prometheus endpoint runs on http://localhost:8081/
+
+You can edit the config.yaml to adjust de endpoint.
+
+More info:
+link:https://github.com/prometheus/jmx_exporter[https://github.com/prometheus/jmx_exporter]

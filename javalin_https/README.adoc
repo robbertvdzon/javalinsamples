@@ -1,0 +1,19 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how add https support.
+
+To add https support, you can simply add the following to the code:
+[source, java]
+        app.server(() -> {
+            SslContextFactory sslContextFactory = new SslContextFactory();
+            sslContextFactory.setKeyStorePath(JavalinHttpsApplication.class.getResource("/serverkeystore.p12").toExternalForm());
+            sslContextFactory.setKeyStoreType("PKCS12");
+            sslContextFactory.setKeyStorePassword("passwd");
+            Server server = new Server();
+            ServerConnector sslConnector = new ServerConnector(server, sslContextFactory);
+            sslConnector.setPort(443);
+            ServerConnector connector = new ServerConnector(server);
+            connector.setPort(80);
+            server.setConnectors(new Connector[]{sslConnector, connector});
+            return server;
+        });

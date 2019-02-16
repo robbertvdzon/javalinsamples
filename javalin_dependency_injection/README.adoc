@@ -1,0 +1,7 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to use dagger2.
+
+The following blogs will explain better how to use Dagger2 then I can do: +
+link:https://www.vogella.com/tutorials/Dagger/article.html[www.vogella.com/tutorials/Dagger/article.html] +
+link:https://www.baeldung.com/dagger-2[www.baeldung.com/dagger-2]

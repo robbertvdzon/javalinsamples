@@ -1,0 +1,10 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how handle exceptions.
+
+To handle an exception, you can simply add the following to the code:
+[source, java]
+        app.exception(MyException.class, (e, ctx) -> {
+            ctx.status(500);
+            ctx.result("Something went wrong! Error=" + e.getMessage());
+        });
