@@ -22,18 +22,18 @@ First, add the log4j dependency:
 
 Secondly, add the following log4j2.properties:
 [code]
-# log4j2.properties
-status = error
-dest = err
-name = PropertiesConfig
+    # log4j2.properties
+    status = error
+    dest = err
+    name = PropertiesConfig
 
-appender.console.type = Console
-appender.console.name = STDOUT
-appender.console.layout.type = JsonLayout
-appender.console.layout.compact= false
-appender.console.layout.eventEol= true
-appender.console.layout.locationInfo= true
-#appender.console.layout.stacktraceAsString= true
+    appender.console.type = Console
+    appender.console.name = STDOUT
+    appender.console.layout.type = JsonLayout
+    appender.console.layout.compact= false
+    appender.console.layout.eventEol= true
+    appender.console.layout.locationInfo= true
+    #appender.console.layout.stacktraceAsString= true
 
-rootLogger.level = info
-rootLogger.appenderRef.stdout.ref = STDOUT
+    rootLogger.level = info
+    rootLogger.appenderRef.stdout.ref = STDOUT
