@@ -38,13 +38,11 @@ The BaseTestClass can very very simple, just like this:
 [source, java]
 public class BaseTestClass {
     private JavalinBaseApplication application;
-
     @Before
     public void before(){
         application = new JavalinBaseApplication();
         application.start();
     }
-
     @After
     public void after(){
         application.stop();
