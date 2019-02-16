@@ -1,0 +1,22 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to use thymeleaf.
+
+Javalin has building support for thymeleaf.
+
+You do need to add the following dependency:
+[code]
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>3.0.9.RELEASE</version>
+        </dependency>
+
+In the code you can do the following:
+[source, java]
+        app.get("/page", ctx -> ctx.render("/templateFile.html", model("firstName", "John", "lastName", "Doe")));
+
+
+The templateFile.html can be stored in the resources folder:
+[code]
+Hello <input type="text" name="userName" value="" th:value="${firstName}" />

@@ -1,0 +1,22 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to read the configuration from a yaml file using snakeyaml
+
+You do need to add the following dependency:
+[code]
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.23</version>
+        </dependency>
+
+In the code you can do the following:
+[source, java]
+        ApplicationProperties applicationProperties = loadProperies(() -> getInputStreamFromFile("application.yml"));
+
+This maps the application.yml file to the ApplicationProperties (pojo) class.
+
+For testing, I also added the maven-shade-plugin so we can build a runnable jar. +
+When running java -jar target/javalin_yaml_properties-0.1.0-shaded.jar, the application.yml from outside the jar is used. +
+When running the JavalinBaseApplicationIT, the application.yml from the test resources is used +
+When running the application from within the IDE, the  application.yml from the mail resources is used

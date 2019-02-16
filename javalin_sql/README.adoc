@@ -1,0 +1,4 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to add use Hibernate for accessing your sql databases.
+More information can be found in de code.

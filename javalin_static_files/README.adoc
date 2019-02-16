@@ -1,0 +1,9 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to use static files.
+
+With Javalin, you can simply add the following to your code:
+[source, java]
+       app.enableStaticFiles("/html");
+
+When you add resources/html/index.html, then that will be available under http://localhost:8080/index.html

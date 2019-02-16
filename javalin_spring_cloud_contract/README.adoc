@@ -1,0 +1,52 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to add a Spring Cloud Contract.
+
+You can just add Spring Cloud Contract on projects that do not use Spring itself. Since this is only added to
+your tests, there will be no dependency on Spring in your main application.
+
+To use Spring Cloud Contract, you need to add the dependency to the pom.xml
+[code]
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-contract-verifier</artifactId>
+            <version>2.1.0.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+And the following plugin
+[code]
+            <plugin>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+                <version>1.2.2.RELEASE</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <testMode>
+                        EXPLICIT
+                    </testMode>
+                    <baseClassForTests>
+                        com.base.BaseTestClass
+                    </baseClassForTests>
+                </configuration>
+            </plugin>
+
+
+It is important to use the EXPLICIT testMode
+
+The BaseTestClass can very very simple, just like this:
+[source, java]
+public class BaseTestClass {
+    private JavalinBaseApplication application;
+
+    @Before
+    public void before(){
+        application = new JavalinBaseApplication();
+        application.start();
+    }
+
+    @After
+    public void after(){
+        application.stop();
+    }
+}

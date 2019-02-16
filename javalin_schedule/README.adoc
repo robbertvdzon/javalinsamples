@@ -1,0 +1,8 @@
+This project is base on the following project: link:https://github.com/robbertvdzon/javalinsamples/tree/master/javalin_base[Most simple REST application] +
+
+This project shows how to add scheduling.
+
+This is done using quartz.
+
+More information about using quartz can be found here:
+link:https://www.baeldung.com/quartz[https://www.baeldung.com/quartz]
