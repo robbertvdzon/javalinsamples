@@ -19,4 +19,4 @@ In the code you can do the following:
 
 The templateFile.html can be stored in the resources folder:
 [code]
-Hello <input type="text" name="userName" value="" th:value="${firstName}" />
+  Hello <input type="text" name="userName" value="" th:value="${firstName}" />
