@@ -27,6 +27,7 @@
         <module>javalin_schedule</module>
         <module>javalin_sql</module>
         <module>javalin_prometheus_2</module>
+      <module>javalin_Resilience4j</module>
     </modules>
 
 </project>
