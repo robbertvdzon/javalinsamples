@@ -1,4 +1,4 @@
-package com.prometheus;
+package com.prometheus2;
 
 import io.javalin.Javalin;
 

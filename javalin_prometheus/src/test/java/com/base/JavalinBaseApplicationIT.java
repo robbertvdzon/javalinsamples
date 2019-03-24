@@ -1,6 +1,6 @@
 package com.base;
 
-import com.prometheus.RunnableJarApplication;
+import com.prometheus2.RunnableJarApplication;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

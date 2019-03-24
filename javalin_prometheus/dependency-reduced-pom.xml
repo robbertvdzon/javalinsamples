@@ -29,7 +29,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.prometheus.RunnableJarApplication</mainClass>
+                  <mainClass>com.prometheus2.RunnableJarApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>
