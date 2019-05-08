@@ -26,38 +26,26 @@ class JavalinRxJavaApplicationIT {
 
     @Test
     @DisplayName("Test basic get")
-    void testHelloWorld() {
+    void testHelloWorld() throws InterruptedException {
         when()
                 .get("/")
                 .then()
                 .statusCode(200)
                 .body(equalTo("Hello World from javalin"));
-
-    }
-
-    @Test
-    @DisplayName("Test get json value")
-    void testGetJson() {
+        Thread.sleep(1000);
         when()
-                .get("/json")
-                .then()
-                .statusCode(200)
-                .contentType("application/json")
-                .body("text", equalTo("Hello World"));
-    }
+            .get("/")
+            .then()
+            .statusCode(200)
+            .body(equalTo("Hello World from javalin"));
+        Thread.sleep(1000);
+        when()
+            .get("/")
+            .then()
+            .statusCode(200)
+            .body(equalTo("Hello World from javalin"));
+        Thread.sleep(20000);
 
-    @Test
-    @DisplayName("Test post json value")
-    void testPostJson() {
-        given()
-                .body("{\"text\": \"Hello from test\"\n}")
-                .contentType("application/json")
-                .when()
-                .post("/json")
-                .then()
-                .statusCode(200)
-                .contentType("text/plain")
-                .body(equalTo("Got post of Hello from test"));
     }
 
 }
